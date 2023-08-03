@@ -35,7 +35,8 @@ MY_APPS = [
 ]
 
 THIRDS_PARTY_APPS = [
-    'rest_framework'
+    'rest_framework',
+    'drf_yasg'
 ]
 
 INSTALLED_APPS = [

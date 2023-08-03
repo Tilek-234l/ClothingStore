@@ -3,9 +3,11 @@ from .models import User, Product
 
 
 class UserSerializer(serializers.ModelSerializer):
+    favorite_products = serializers.PrimaryKeyRelatedField(many=True, queryset=Product.objects.all())
+
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('id', 'username', 'email', 'password', 'favorite_products')
 
 
 class ProductSerializer(serializers.ModelSerializer):
