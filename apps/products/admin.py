@@ -8,7 +8,7 @@ from .models import User, Product
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'description', 'get_image')  # Отображаемые поля в списке товаров
+    list_display = ('id', 'name', 'price', 'description', 'get_image')  # Отображаемые поля в списке товаров
 
     def get_image(self, obj):
         return mark_safe(f'<img src={obj.image.url} width="50" height="60"')
